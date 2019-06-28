@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const keys = require('./config/keys');
 
 router.get('/test', function(req, res) {
-  res.send('testing api!');
+  res.send('testing api 2!');
 });
 
 router.get('/secret', withAuth, function(req, res) {
