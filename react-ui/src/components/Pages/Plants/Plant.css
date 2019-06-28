@@ -1,0 +1,35 @@
+.dot-pagination {
+  width:100%;
+  text-align: center;
+  padding-top:10px;
+}
+
+.dot a {
+  height: 8px;
+  width: 8px;
+  background-color: #aaa;
+  border-radius: 100%;
+  display: inline-block;
+  margin:8px;
+}
+
+a.activeDot {
+  background-color: #111;
+}
+
+.custom-swipers {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .custom-swipers {
+    visibility: visible;
+    position: absolute;
+  }
+  .custom-swipers-prev {
+    margin-left: -27px;
+  }
+  .custom-swipers-next {
+    margin-right: -27px;
+  }
+ }
