@@ -12,6 +12,7 @@ import NotFound from "../NotFound";
 // auth
 import Secret from '../Auth/Secret';
 import Login from '../Auth/Login';
+import Logout from '../Auth/Logout';
 import Register from '../Auth/Register';
 import withAuth from '../Auth/withAuth';
 
@@ -35,6 +36,8 @@ class App extends React.Component {
               <Route  path="/plants" component={Plants} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
+              <Route path="/secret" component={withAuth(Secret)} />
+              <Route path="/logout" component={withAuth(Logout)} />
               <Route component={NotFound} />
             </Switch>
           </div>

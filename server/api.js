@@ -23,8 +23,17 @@ router.post('/register', function(req, res) {
       res.status(500).send("Error registering new user please try again.");
     } else {
       res.status(200).send("Welcome to the club!");
+
     }
   });
+});
+
+router.post('/logout', function(req, res) {
+  // req.logOut();
+  // req.session.destroy(function (err) {
+  //        res.redirect('/'); //Inside a callback… bulletproof!
+  //    });
+  res.clearCookie('token').sendStatus(200);
 });
 
 router.post('/authenticate', function(req, res) {

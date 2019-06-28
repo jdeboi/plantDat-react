@@ -31,6 +31,15 @@ class HeaderNav extends React.Component {
     paddingLeft: "10px"
   };
 
+  loginStyle = {
+    color: "white",
+    paddingRight:"10px"
+  }
+
+  buttonStyle = {
+    paddingRight: "20px"
+  }
+
   render() {
 
 
@@ -38,10 +47,18 @@ class HeaderNav extends React.Component {
       <div>
         <Navbar className="plantColor" dark>
           <NavbarBrand href="/" className="mr-auto">Plant Dat</NavbarBrand>
-          <NavLink exact to="/login" activeStyle={this.active}>
-            <button className="btn-sm btn btn-outline-light">
-              <FontAwesomeIcon icon={faUser} />
-              <span style={this.iconPadding}>Login</span>
+          <NavLink exact to="/login" style={this.loginStyle}>
+            Login
+          </NavLink>
+          <NavLink exact to="/logout" style={this.loginStyle}>
+            Logout
+          </NavLink>
+          <NavLink exact to="/register" activeStyle={this.active} style={this.buttonStyle}>
+            <button className="btn-sm btn btn-outline-light" >
+              {/*<FontAwesomeIcon icon={faUser} />
+              <span style={this.iconPadding}>Sign Up</span>*/
+              }
+              Sign Up
             </button>
           </NavLink>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
